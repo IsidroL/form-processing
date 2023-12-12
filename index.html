@@ -124,6 +124,18 @@
       urlParams.forEach(function(value,key){
 
         key = key.split("_").join(" ");
+
+        switch(key){
+          case "Frist Name":
+          case "Last Name":
+          case "City":
+          case "Address":
+            value = titleCase(value);
+          break;
+        }
+
+
+
         //title case everything
         value = titleCase(value);
 
